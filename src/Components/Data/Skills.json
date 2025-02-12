@@ -1,0 +1,22 @@
+[
+    {
+        "title": "JavaScript",
+        "imageUrl": "/Assets/Javascript.jpg"
+    },
+    {
+        "title": "React",
+        "imageUrl": "/Assets/React.png"
+    },
+    {
+        "title": "HTML",
+        "imageUrl": "/Assets/Html.png"
+    },
+    {
+        "title": "CSS",
+        "imageUrl": "/Assets/Css.png"
+    },
+    {
+        "title": "Boostrap",
+        "imageUrl": "/Assets/Bootstrap.png"
+    }
+]
