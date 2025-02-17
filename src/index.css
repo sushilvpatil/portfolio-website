@@ -1,4 +1,3 @@
-
 :root{
   --box-shadow: 5px 5px 10px 10px rgba(101, 175,10, 0.5);
   --bg-color:rgb(40, 47, 97);
@@ -11,29 +10,13 @@ a{
   text-decoration: none;
   color: white;
 }
-/* .nav_bar{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  
- 
-}
-.nav_bar .nav_items{
-  padding: 16px;
-  font-size: 1.2rem;
-  font-weight: bold;
-}
 
-.nav_bar .nav_items:hover{
-border-bottom: 3px solid yellow;
-} */
-/* Global CSS for Navbar */
 .nav_bar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 16px;
-  position: relative; /* To allow absolute positioning for the hamburger icon */
+  position: relative; 
 }
 
 .nav_bar .left {
@@ -60,22 +43,21 @@ border-bottom: 3px solid yellow;
   border-bottom: 3px solid yellow;
 }
 
-/* Media Queries for Smaller Screens */
 @media (max-width: 768px) {
   .nav_bar {
-    flex-direction: column; /* Stack items vertically on smaller screens */
+    flex-direction: column; 
     align-items: flex-start;
   }
 
   .nav_bar .right {
-    display: none; /* Hide links on mobile by default */
+    display: none; 
     width: 100%;
     flex-direction: column;
-    align-items: flex-start; /* Align links to the left */
+    align-items: flex-start;
   }
 
   .nav_bar .right.show {
-    display: flex; /* Show the links when the menu is toggled */
+    display: flex;
   }
 
   .nav_bar .nav_items {
@@ -88,7 +70,7 @@ border-bottom: 3px solid yellow;
     display: block;
     position: absolute;
     top: 20px;
-    right: 16px; /* Position the hamburger icon on the right */
+    right: 16px;
     cursor: pointer;
   }
 
@@ -101,43 +83,6 @@ border-bottom: 3px solid yellow;
   }
 }
 
-
-/* .home{
-  display: flex;
-  justify-content: center;
-  align-items: center;
- height: 80vh;
- gap: 100px;
-}
-
-.home .right .img{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  
-}
-.home .right .img  img{
-  width: 200 px;
-  height: 200px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 5px solid yellow;
-  animation: animate ;
-  animation-duration: 3s;
-  animation-iteration-count: infinite;
-}
-.home .left{
- background-color: var(--bg-color);
-  width: 620px;
-  text-align:  center;
-  padding: 30px;
-  border-bottom: 10px;
-  border:  1px solid yellow;
-  box-shadow: var(--box-shadow);
-  
-} */
-/* Container styles */
-/* Home Section */
 .home {
   display: flex;
   justify-content: center;
@@ -148,7 +93,6 @@ border-bottom: 3px solid yellow;
   padding: 20px;
 }
 
-/* Left Section */
 .home .left {
   background-color: var(--bg-color);
   width: 620px;
@@ -157,10 +101,9 @@ border-bottom: 3px solid yellow;
   border-bottom: 10px;
   border: 1px solid yellow;
   box-shadow: var(--box-shadow);
-  margin-bottom: 20px; /* Added margin-bottom for small screens */
+  margin-bottom: 20px; 
 }
 
-/* Right Section */
 .home .right .img {
   display: flex;
   justify-content: center;
@@ -178,7 +121,6 @@ border-bottom: 3px solid yellow;
   animation-iteration-count: infinite;
 }
 
-/* Keyframes for animation */
 @keyframes animate {
   0% {
     border-color: blue;
@@ -205,12 +147,11 @@ border-bottom: 3px solid yellow;
   }
 }
 
-/* Responsive adjustments for smaller screens */
 @media (max-width: 768px) {
   .home {
     flex-direction: column;
-    gap: 50px; /* Decreased gap for small screen */
-    height: auto; /* Allow home section to adjust its height on small screens */
+    gap: 50px; 
+    height: auto; 
   }
 
   .home .left {
@@ -226,10 +167,9 @@ border-bottom: 3px solid yellow;
   }
 
   .home h1 {
-    font-size: 1.8rem; /* Adjusted font size for small screen */
+    font-size: 1.8rem; 
   }
 
-  /* Slightly smaller animation duration */
   .home .right .img img {
     animation-duration: 2.5s;
   }
@@ -248,35 +188,7 @@ border-bottom: 3px solid yellow;
   }
 }
 
-
-@keyframes animate{
-  0%{
-    border-color: blue;
-    transform: translate(0px, 0px);
-    box-shadow: 10px 10px 100px 50px blue
-  }
-25%{
-  background-color: rgb(239, 244, 11);
-  box-shadow: 10px 10px 100px 50px rgb(239, 244, 11)
-}
-50%{
-  border-color: rgb(12, 12, 199);
-  transform: translate(0px, 10px);
-  box-shadow: 10px 10px 100px 50px rgb(12, 12, 199)
-}
-75%{
-  border-color: rgb(130, 127, 160);
-  box-shadow: 10px 10px 100px 50px rgb(130, 127, 160)
-}
-100%{
-  border-color: rgb(50, 55, 205);
-  transform: translate(0px, 0px);
-  box-shadow: 10px 10px 100px 50px rgb(50, 55, 205)
-}
-}
-
 .About {
- 
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -307,7 +219,7 @@ border-bottom: 3px solid yellow;
     transform: translateX(0);
   }
 }
-/* /* Experience Section Styles */
+
 .EX {
   padding: 50px 0;
 }
@@ -369,10 +281,9 @@ border-bottom: 3px solid yellow;
   color: yellow;
 }
 
-/* Mobile Responsiveness */
 @media (max-width: 768px) {
   .EX-item {
-    flex-direction: column; /* Stack the image and text vertically on mobile */
+    flex-direction: column;
     text-align: center;
   }
 
@@ -390,24 +301,23 @@ border-bottom: 3px solid yellow;
   }
 
   .ExperienceHeader {
-    font-size: 2rem; /* Smaller font size for mobile */
+    font-size: 2rem;
     margin-bottom: 20px;
   }
 
   .EX-item .right h2 {
-    font-size: 1.5rem; /* Adjust title font size */
+    font-size: 1.5rem;
   }
 
   .EX-item .right h4,
   .EX-item .right p {
-    font-size: 1.2rem; /* Adjust font size for better readability */
+    font-size: 1.2rem;
   }
 }
 
-/* Tablet view (between 768px and 1024px) */
 @media (max-width: 1024px) and (min-width: 769px) {
   .EX-item {
-    flex-direction: row; /* Keep them side by side on tablet */
+    flex-direction: row;
     text-align: left;
   }
 
@@ -429,7 +339,6 @@ border-bottom: 3px solid yellow;
   }
 }
 
-/* Skills Section */
 .Skills {
   padding: 50px 0;
 }
@@ -457,7 +366,7 @@ border-bottom: 3px solid yellow;
   border-radius: 10px;
   box-shadow: var(--box-shadow);
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-  flex-basis: 30%; /* This ensures that each item takes up about 30% of the width */
+  flex-basis: 30%;
 }
 
 .item img {
@@ -472,37 +381,35 @@ border-bottom: 3px solid yellow;
   box-shadow: 10px 10px 20px 10px rgba(101, 175, 10, 0.7);
 }
 
-/* Mobile Responsiveness */
 @media (max-width: 768px) {
   .Skills h1 {
-    font-size: 2rem; /* Smaller heading size on mobile */
+    font-size: 2rem;
   }
 
   .items {
-    flex-direction: column; /* Stack items vertically on mobile */
-    align-items: center; /* Center items on mobile */
+    flex-direction: column;
+    align-items: center;
   }
 
   .item {
-    flex-basis: 80%; /* Make each item take up most of the width on mobile */
+    flex-basis: 80%;
     margin-bottom: 20px;
   }
 
   .item img {
-    width: 50px; /* Smaller icons on mobile */
+    width: 50px;
     height: 50px;
   }
 }
 
-/* Tablet View (Between 768px and 1024px) */
 @media (max-width: 1024px) and (min-width: 769px) {
   .items {
-    flex-direction: row; /* Keep the items side by side on tablets */
+    flex-direction: row;
     justify-content: space-between;
   }
 
   .item {
-    flex-basis: 45%; /* Items take up about 45% of the width */
+    flex-basis: 45%;
   }
 }
 
@@ -513,39 +420,6 @@ border-bottom: 3px solid yellow;
   border-radius: 10px; 
 }
 
-/* .Contact-Icons{
-  height: 30vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
- 
-}
-.Icon{
-  height: 30px;
-  width: 30px;
-}
-.Contact-Icons .items{
-  background-color: black;
-  margin: 10px;
-  height: 70px;
-  width: 70px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 100%;
-  border: 2px solid yellow;
-}
-.Contact-Icons .Icon{
-  font-size: 3rem;
- 
-}
-
-.Contact-Icons .items:hover{
-  background-color: var(--bg-color);
-  box-shadow: var(--box-shadow);
-} */
-
-/* Contact Section */
 .Contact {
   padding: 50px 0;
   display: flex;
@@ -554,7 +428,6 @@ border-bottom: 3px solid yellow;
   justify-content: center;
 }
 
-/* Contact Heading */
 .Contact h1 {
   text-align: center;
   font-size: 2.5rem;
@@ -562,94 +435,87 @@ border-bottom: 3px solid yellow;
   margin-bottom: 40px;
 }
 
-/* Contact Icons Container */
 .Contact-Icons {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 30px; /* Space between each icon */
-  margin-bottom: 50px; /* Provide space at the bottom */
-  flex-wrap: wrap; /* Allow wrapping for smaller screens */
-  width: 100%; /* Ensure it takes up the full width */
-  justify-content: center; /* Ensure items are centered */
+  gap: 30px;
+  margin-bottom: 50px;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
 }
 
-/* Contact Icon Style */
 .Contact-Icons .items {
   background-color: black;
-  height: 80px; /* Increase icon circle size */
-  width: 80px; /* Increase icon circle size */
+  height: 80px;
+  width: 80px;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 50%; /* Circle shape */
+  border-radius: 50%;
   border: 2px solid yellow;
   transition: background-color 0.3s, box-shadow 0.3s;
-  margin-bottom: 20px; /* Add space below each icon to avoid bottom alignment */
+  margin-bottom: 20px;
 }
 
-/* Icon Size */
 .Contact-Icons .Icon {
-  font-size: 3.5rem; /* Increase the icon size */
+  font-size: 3.5rem;
   color: white;
 }
 
-/* Hover Effect */
 .Contact-Icons .items:hover {
   background-color: var(--bg-color);
   box-shadow: var(--box-shadow);
 }
 
-/* Mobile Responsiveness */
 @media (max-width: 768px) {
   .Contact h1 {
-    font-size: 2rem; /* Smaller heading size on mobile */
+    font-size: 2rem;
   }
 
   .Contact-Icons {
-    flex-direction: row; /* Keep icons side by side on mobile */
-    justify-content: center; /* Center icons on mobile */
-    gap: 25px; /* Space between icons on mobile */
-    margin-bottom: 30px; /* Space at the bottom */
+    flex-direction: row;
+    justify-content: center;
+    gap: 25px;
+    margin-bottom: 30px;
   }
 
   .Contact-Icons .items {
-    height: 60px; /* Slightly smaller icon size on mobile */
-    width: 60px; /* Slightly smaller icon size on mobile */
+    height: 60px;
+    width: 60px;
   }
 
   .Contact-Icons .Icon {
-    font-size: 3rem; /* Larger icons on mobile */
+    font-size: 3rem;
   }
 }
 
-/* Tablet View (Between 768px and 1024px) */
 @media (max-width: 1024px) and (min-width: 769px) {
   .Contact-Icons {
-    flex-direction: row; /* Keep the icons side by side on tablets */
-    justify-content: center; /* Center icons on tablet */
-    gap: 25px; /* Adjust space between icons */
-    margin-bottom: 40px; /* Space at the bottom */
+    flex-direction: row;
+    justify-content: center;
+    gap: 25px;
+    margin-bottom: 40px;
   }
 
   .Contact-Icons .items {
-    height: 70px; /* Medium icon size on tablets */
-    width: 70px; /* Medium icon size on tablets */
+    height: 70px;
+    width: 70px;
   }
 
   .Contact-Icons .Icon {
-    font-size: 3rem; /* Medium icon size on tablets */
+    font-size: 3rem;
   }
 }
 
-
 .About {
-  margin-top: 0px; /* Add margin from top to match other sections */
+  margin-top: 0px;
 }
 
 .about-heading {
   text-align: left;
-  margin-bottom: 20px; /* Add space between heading and card */
+  margin-bottom: 20px;
 }
 
 .about-card {
