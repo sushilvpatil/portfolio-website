@@ -30,7 +30,7 @@ function Home() {
       </div>
       <div className="right" data-aos="fade-up-left" data-aos-duration="1000">
         <div className="img">
-          <img src={images.boyWithLaptop} alt="image here" />
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREnKbATfnK--KR21jiDXdJiMKGpy429kcBeQ&s" alt="image here" />
         </div>
       </div>
     </div>
