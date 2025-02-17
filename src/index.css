@@ -11,7 +11,7 @@ a{
   text-decoration: none;
   color: white;
 }
-.nav_bar{
+/* .nav_bar{
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -26,9 +26,83 @@ a{
 
 .nav_bar .nav_items:hover{
 border-bottom: 3px solid yellow;
+} */
+/* Global CSS for Navbar */
+.nav_bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  position: relative; /* To allow absolute positioning for the hamburger icon */
 }
 
-.home{
+.nav_bar .left {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+}
+
+.nav_bar .right {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav_bar .nav_items {
+  padding: 16px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+}
+
+.nav_bar .nav_items:hover {
+  border-bottom: 3px solid yellow;
+}
+
+/* Media Queries for Smaller Screens */
+@media (max-width: 768px) {
+  .nav_bar {
+    flex-direction: column; /* Stack items vertically on smaller screens */
+    align-items: flex-start;
+  }
+
+  .nav_bar .right {
+    display: none; /* Hide links on mobile by default */
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start; /* Align links to the left */
+  }
+
+  .nav_bar .right.show {
+    display: flex; /* Show the links when the menu is toggled */
+  }
+
+  .nav_bar .nav_items {
+    width: 100%;
+    text-align: left;
+    padding: 10px 16px;
+  }
+
+  .nav_bar .hamburger {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 16px; /* Position the hamburger icon on the right */
+    cursor: pointer;
+  }
+
+  .nav_bar .hamburger div {
+    width: 30px;
+    height: 4px;
+    background-color: white;
+    margin: 6px 0;
+    border-radius: 2px;
+  }
+}
+
+
+/* .home{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -61,7 +135,119 @@ border-bottom: 3px solid yellow;
   border:  1px solid yellow;
   box-shadow: var(--box-shadow);
   
+} */
+/* Container styles */
+/* Home Section */
+.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+  height: 80vh;
+  flex-wrap: wrap;
+  padding: 20px;
 }
+
+/* Left Section */
+.home .left {
+  background-color: var(--bg-color);
+  width: 620px;
+  text-align: center;
+  padding: 30px;
+  border-bottom: 10px;
+  border: 1px solid yellow;
+  box-shadow: var(--box-shadow);
+  margin-bottom: 20px; /* Added margin-bottom for small screens */
+}
+
+/* Right Section */
+.home .right .img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home .right .img img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid yellow;
+  animation: animate;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+
+/* Keyframes for animation */
+@keyframes animate {
+  0% {
+    border-color: blue;
+    transform: translate(0px, 0px);
+    box-shadow: 10px 10px 100px 50px blue;
+  }
+  25% {
+    background-color: rgb(239, 244, 11);
+    box-shadow: 10px 10px 100px 50px rgb(239, 244, 11);
+  }
+  50% {
+    border-color: rgb(12, 12, 199);
+    transform: translate(0px, 10px);
+    box-shadow: 10px 10px 100px 50px rgb(12, 12, 199);
+  }
+  75% {
+    border-color: rgb(130, 127, 160);
+    box-shadow: 10px 10px 100px 50px rgb(130, 127, 160);
+  }
+  100% {
+    border-color: rgb(50, 55, 205);
+    transform: translate(0px, 0px);
+    box-shadow: 10px 10px 100px 50px rgb(50, 55, 205);
+  }
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .home {
+    flex-direction: column;
+    gap: 50px; /* Decreased gap for small screen */
+    height: auto; /* Allow home section to adjust its height on small screens */
+  }
+
+  .home .left {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+  .home .right .img img {
+    width: 150px;
+    height: 150px;
+    border: 4px solid yellow;
+  }
+
+  .home h1 {
+    font-size: 1.8rem; /* Adjusted font size for small screen */
+  }
+
+  /* Slightly smaller animation duration */
+  .home .right .img img {
+    animation-duration: 2.5s;
+  }
+}
+
+@media (max-width: 480px) {
+  .home .left {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .home .right .img img {
+    width: 130px;
+    height: 130px;
+    border: 3px solid yellow;
+  }
+}
+
 
 @keyframes animate{
   0%{
@@ -121,51 +307,203 @@ border-bottom: 3px solid yellow;
     transform: translateX(0);
   }
 }
-.ExperienceHeader{
-  width: 900px;
-  margin-top: 50px;
+/* /* Experience Section Styles */
+.EX {
+  padding: 50px 0;
 }
 
-.EX-item{
+.ExperienceHeader {
+  text-align: center;
+  font-size: 2.5rem;
+  color: white;
+  margin-bottom: 40px;
+}
+
+.EX-item {
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: var(--bg-color);
-  margin: 20px;
-  width: 800px;
+  margin: 20px 0;
   padding: 30px;
   border-radius: 10px;
-  border: 1px solid yellow;
   box-shadow: var(--box-shadow);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
-.Skills{
-  width: 900px;
+.EX-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 10px 10px 20px 10px rgba(101, 175, 10, 0.7);
 }
-.Skills .items{
+
+.EX-item .left {
+  flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
- flex-wrap: wrap;
- /* width: 700px; */
- margin: auto;
 }
-.Skills .items .item img{
+
+.EX-item .left img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid yellow;
+}
+
+.EX-item .right {
+  flex: 2;
+  padding-left: 20px;
+}
+
+.EX-item .right h2 {
+  font-size: 1.8rem;
+  color: white;
+}
+
+.EX-item .right h4 {
+  color: yellowgreen;
+}
+
+.EX-item .right p {
+  color: yellow;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .EX-item {
+    flex-direction: column; /* Stack the image and text vertically on mobile */
+    text-align: center;
+  }
+
+  .EX-item .left {
+    margin-bottom: 20px;
+  }
+
+  .EX-item .left img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .EX-item .right {
+    padding-left: 0;
+  }
+
+  .ExperienceHeader {
+    font-size: 2rem; /* Smaller font size for mobile */
+    margin-bottom: 20px;
+  }
+
+  .EX-item .right h2 {
+    font-size: 1.5rem; /* Adjust title font size */
+  }
+
+  .EX-item .right h4,
+  .EX-item .right p {
+    font-size: 1.2rem; /* Adjust font size for better readability */
+  }
+}
+
+/* Tablet view (between 768px and 1024px) */
+@media (max-width: 1024px) and (min-width: 769px) {
+  .EX-item {
+    flex-direction: row; /* Keep them side by side on tablet */
+    text-align: left;
+  }
+
+  .EX-item .left img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .EX-item .right h2 {
+    font-size: 1.8rem;
+  }
+
+  .EX-item .right h4 {
+    font-size: 1.3rem;
+  }
+
+  .EX-item .right p {
+    font-size: 1.2rem;
+  }
+}
+
+/* Skills Section */
+.Skills {
+  padding: 50px 0;
+}
+
+.Skills h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: white;
+  margin-bottom: 40px;
+}
+
+.items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
+  padding: 20px;
+}
+
+.item {
+  background-color: var(--bg-color);
+  color: white;
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: var(--box-shadow);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  flex-basis: 30%; /* This ensures that each item takes up about 30% of the width */
+}
+
+.item img {
   width: 70px;
   height: 70px;
+  margin-bottom: 10px;
+  border-radius: 50%;
 }
-.Skills .items .item{
-width:calc( 33.33%);
-background-color: black;
-margin: 20px;
-text-align: center;
-padding: 20px;
-border-radius: 10px;
-border: 1px solid yellow;
-box-shadow: var(--box-shadow);
+
+.item:hover {
+  transform: translateY(-10px);
+  box-shadow: 10px 10px 20px 10px rgba(101, 175, 10, 0.7);
 }
-.Skills{
-  margin: 0;
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .Skills h1 {
+    font-size: 2rem; /* Smaller heading size on mobile */
+  }
+
+  .items {
+    flex-direction: column; /* Stack items vertically on mobile */
+    align-items: center; /* Center items on mobile */
+  }
+
+  .item {
+    flex-basis: 80%; /* Make each item take up most of the width on mobile */
+    margin-bottom: 20px;
+  }
+
+  .item img {
+    width: 50px; /* Smaller icons on mobile */
+    height: 50px;
+  }
+}
+
+/* Tablet View (Between 768px and 1024px) */
+@media (max-width: 1024px) and (min-width: 769px) {
+  .items {
+    flex-direction: row; /* Keep the items side by side on tablets */
+    justify-content: space-between;
+  }
+
+  .item {
+    flex-basis: 45%; /* Items take up about 45% of the width */
+  }
 }
 
 .card-img-cls{
@@ -175,7 +513,7 @@ box-shadow: var(--box-shadow);
   border-radius: 10px; 
 }
 
-.Contact-Icons{
+/* .Contact-Icons{
   height: 30vh;
   display: flex;
   justify-content: center;
@@ -205,7 +543,105 @@ box-shadow: var(--box-shadow);
 .Contact-Icons .items:hover{
   background-color: var(--bg-color);
   box-shadow: var(--box-shadow);
+} */
+
+/* Contact Section */
+.Contact {
+  padding: 50px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
+
+/* Contact Heading */
+.Contact h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: white;
+  margin-bottom: 40px;
+}
+
+/* Contact Icons Container */
+.Contact-Icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px; /* Space between each icon */
+  margin-bottom: 50px; /* Provide space at the bottom */
+  flex-wrap: wrap; /* Allow wrapping for smaller screens */
+  width: 100%; /* Ensure it takes up the full width */
+  justify-content: center; /* Ensure items are centered */
+}
+
+/* Contact Icon Style */
+.Contact-Icons .items {
+  background-color: black;
+  height: 80px; /* Increase icon circle size */
+  width: 80px; /* Increase icon circle size */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%; /* Circle shape */
+  border: 2px solid yellow;
+  transition: background-color 0.3s, box-shadow 0.3s;
+  margin-bottom: 20px; /* Add space below each icon to avoid bottom alignment */
+}
+
+/* Icon Size */
+.Contact-Icons .Icon {
+  font-size: 3.5rem; /* Increase the icon size */
+  color: white;
+}
+
+/* Hover Effect */
+.Contact-Icons .items:hover {
+  background-color: var(--bg-color);
+  box-shadow: var(--box-shadow);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .Contact h1 {
+    font-size: 2rem; /* Smaller heading size on mobile */
+  }
+
+  .Contact-Icons {
+    flex-direction: row; /* Keep icons side by side on mobile */
+    justify-content: center; /* Center icons on mobile */
+    gap: 25px; /* Space between icons on mobile */
+    margin-bottom: 30px; /* Space at the bottom */
+  }
+
+  .Contact-Icons .items {
+    height: 60px; /* Slightly smaller icon size on mobile */
+    width: 60px; /* Slightly smaller icon size on mobile */
+  }
+
+  .Contact-Icons .Icon {
+    font-size: 3rem; /* Larger icons on mobile */
+  }
+}
+
+/* Tablet View (Between 768px and 1024px) */
+@media (max-width: 1024px) and (min-width: 769px) {
+  .Contact-Icons {
+    flex-direction: row; /* Keep the icons side by side on tablets */
+    justify-content: center; /* Center icons on tablet */
+    gap: 25px; /* Adjust space between icons */
+    margin-bottom: 40px; /* Space at the bottom */
+  }
+
+  .Contact-Icons .items {
+    height: 70px; /* Medium icon size on tablets */
+    width: 70px; /* Medium icon size on tablets */
+  }
+
+  .Contact-Icons .Icon {
+    font-size: 3rem; /* Medium icon size on tablets */
+  }
+}
+
 
 .About {
   margin-top: 0px; /* Add margin from top to match other sections */
