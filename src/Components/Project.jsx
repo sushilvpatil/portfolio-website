@@ -16,7 +16,17 @@ function Project() {
                                 <div className="card-body">
                                     <h5 className="card-title">{project.title}</h5>
                                     <p className="card-text">{project.description}</p>
-                                    <a href={project.source} className="btn btn-primary" target="_blank">Source Code</a>
+
+                                    {/* Conditional link */}
+                                    {project.Link && (
+                                        <a href={project.Link} className="btn btn-warning me-2" target="_blank" rel="noopener noreferrer">
+                                            View Live
+                                        </a>
+                                    )}
+
+                                    <a href={project.source} className="btn btn-primary" target="_blank" rel="noopener noreferrer">
+                                        Source Code
+                                    </a>
                                 </div>
                             </div>
                         </div>
