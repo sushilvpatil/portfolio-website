@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { EXP, PROJECTS, SKILLS, ROLES, SOCIALS, STATS } from "../data";
-import pdf from './Pdf/Resume.pdf';
+import pdf from './Pdf/Sushil_Patil_Resume_UP.pdf';
 import {
   Sun, Moon, Menu, X, MapPin, Briefcase, Zap, Mail,
   Github, Linkedin, ExternalLink, ArrowRight, Download,
@@ -379,7 +379,7 @@ export default function Portfolio() {
               textDecoration:"none", fontFamily:SANS, fontWeight:700, fontSize:"15px",
               boxShadow:"0 8px 20px rgba(37,99,235,0.25)",
             }}><Mail size={16} strokeWidth={2}/>Hire Me</a>
-            <a href={pdf} download="Resume.pdf" style={{
+            <a href={pdf} download="Sushil_Patil_Resume_UP.pdf" style={{
               display:"flex", alignItems:"center", justifyContent:"center", gap:8,
               padding:"13px", borderRadius:"12px", background:"transparent",
               color:c.primary, textDecoration:"none",
@@ -457,7 +457,7 @@ export default function Portfolio() {
                 textDecoration:"none", display:"inline-flex", alignItems:"center", gap:7,
               }}><Mail size={16} strokeWidth={2}/>Let's Connect</a>
 
-              <a href={pdf} download="Resume.pdf" className="btn-s" style={{
+              <a href={pdf} download="Sushil_Patil_Resume_UP.pdf" className="btn-s" style={{
                 padding:isMob?"13px 22px":"16px 34px", borderRadius:"13px",
                 fontFamily:SANS, fontWeight:700, fontSize:"15px",
                 background:c.gradSoft, color:c.primary, border:`1.5px solid ${c.border}`,
